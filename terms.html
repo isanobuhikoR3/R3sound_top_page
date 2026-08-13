@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>素材利用規約 | R3sound らいぶらり</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .terms-page { min-height: 100vh; color: #4d3924; background: #fffdf5; }
+    .terms-hero { position: relative; overflow: hidden; min-height: 260px; padding: 18px 5% 46px; text-align: center; background: url('assets/images/01.png') center 55% / cover no-repeat; }
+    .terms-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.26)); pointer-events: none; }
+    .terms-nav, .terms-brand { position: relative; z-index: 1; }
+    .terms-nav { display: flex; justify-content: flex-start; max-width: 1320px; margin: 0 auto; }
+    .terms-nav a { display: inline-flex; align-items: center; gap: 5px; padding: 7px 11px; border: 2px solid rgba(255,255,255,.94); border-radius: 999px; background: rgba(255,255,255,.84); color: #4089ad; font-weight: 800; font-size: .9rem; text-decoration: none; box-shadow: 0 3px 0 rgba(49,123,154,.18); transition: transform .2s ease, background .2s ease; }
+    .terms-nav a:hover, .terms-nav a:focus-visible { transform: translateY(-2px); background: #fff; }
+    .terms-nav img { width: 23px; height: 23px; object-fit: contain; }
+    .terms-brand { display: inline-block; margin-top: 24px; }
+    .terms-brand img { width: min(850px, 60vw); height: auto; }
+    .terms-note { position: absolute; z-index: 1; width: clamp(22px, 2.1vw, 34px); height: auto; pointer-events: none; animation: terms-float 3.5s ease-in-out infinite; }
+    .terms-note.n1 { left: 8%; top: 79px; animation-delay: -.4s; }
+    .terms-note.n2 { left: 17%; top: 151px; animation-delay: -1.4s; }
+    .terms-note.n3 { left: 27%; top: 88px; animation-delay: -2.2s; }
+    .terms-note.n4 { left: 36%; top: 187px; animation-delay: -1s; }
+    .terms-note.n5 { left: 62%; top: 88px; animation-delay: -2.8s; }
+    .terms-note.n6 { left: 72%; top: 162px; animation-delay: -.8s; }
+    .terms-note.n7 { left: 82%; top: 95px; animation-delay: -1.9s; }
+    .terms-note.n8 { left: 91%; top: 175px; animation-delay: -2.6s; }
+    .terms-note.n9 { left: 47%; top: 72px; animation-delay: -1.6s; }
+    .terms-note.n10 { left: 53%; top: 184px; animation-delay: -.2s; }
+    @keyframes terms-float { 0%, 100% { transform: translateY(0) rotate(-5deg); } 50% { transform: translateY(-13px) rotate(8deg); } }
+    .terms-main { position: relative; z-index: 2; max-width: 1000px; margin: 28px auto 0; padding: 0 22px 54px; }
+    .terms-card { padding: clamp(26px, 5vw, 52px); border: 2px solid #f0d38b; border-radius: 26px; background: rgba(255,255,255,.96); box-shadow: 0 8px 20px rgba(135,104,48,.14); }
+    .terms-card > h2 { margin: 0 0 19px; padding-bottom: 13px; border-bottom: 2px dashed #9ac54e; color: #4b9633; font-size: clamp(1.6rem, 4vw, 2.25rem); text-align: center; }
+    .terms-lead { margin: 0 0 30px; line-height: 1.9; font-weight: 600; }
+    .terms-section { margin-top: 32px; }
+    .terms-section > h2 { margin: 0 0 14px; padding: 11px 16px; border-radius: 13px; background: linear-gradient(90deg, #e7f8c9, #f7fce9); color: #478c31; font-size: clamp(1.12rem, 2.7vw, 1.45rem); }
+    .terms-section > p { margin: 0 0 19px; line-height: 1.85; }
+    .terms-item { padding: 16px 17px; border-left: 6px solid #8fc840; border-radius: 0 13px 13px 0; background: #fffdf4; }
+    .terms-item + .terms-item { margin-top: 14px; }
+    .terms-item h3 { margin: 0 0 7px; color: #725126; font-size: 1.08rem; }
+    .terms-item p { margin: 0; line-height: 1.8; }
+    .terms-prohibited .terms-item { border-left-color: #ef815c; background: #fff8f2; }
+    .terms-prohibited .terms-item h3 { color: #c45c3d; }
+    .terms-footer { position: relative; min-height: 78px; overflow: hidden; display: grid; place-items: end center; padding-bottom: 12px; background: url('assets/images/02.png') center / 100% 100% no-repeat; color: #fff; font-weight: 900; font-size: 1.05rem; text-shadow: 0 2px 2px rgba(60,113,25,.35); }
+    .terms-footer a { color: inherit; text-decoration: none; }
+    @media (max-width: 620px) { .terms-hero { min-height: 218px; padding: 12px 14px 37px; } .terms-nav a { padding: 6px 9px; font-size: .78rem; } .terms-nav img { width: 19px; height: 19px; } .terms-brand { margin-top: 21px; } .terms-brand img { width: 95%; } .terms-note { width: 20px; } .terms-note.n3, .terms-note.n4, .terms-note.n5, .terms-note.n9, .terms-note.n10 { display: none; } .terms-main { margin-top: 18px; padding: 0 12px 34px; } .terms-card { border-radius: 19px; } .terms-item { padding: 13px; } }
+  </style>
+</head>
+<body class="terms-page">
+  <header class="terms-hero">
+    <nav class="terms-nav" aria-label="ページ操作">
+      <a href="index.html"><span aria-hidden="true">←</span> 戻る</a>
+    </nav>
+    <img class="terms-note n1" src="assets/images/06.png" alt="">
+    <img class="terms-note n2" src="assets/images/07.png" alt="">
+    <img class="terms-note n3" src="assets/images/08.png" alt="">
+    <img class="terms-note n4" src="assets/images/09.png" alt="">
+    <img class="terms-note n5" src="assets/images/06.png" alt="">
+    <img class="terms-note n6" src="assets/images/07.png" alt="">
+    <img class="terms-note n7" src="assets/images/08.png" alt="">
+    <img class="terms-note n8" src="assets/images/09.png" alt="">
+    <img class="terms-note n9" src="assets/images/07.png" alt="">
+    <img class="terms-note n10" src="assets/images/06.png" alt="">
+    <a class="terms-brand" href="index.html" aria-label="R3sound らいぶらり トップページへ"><img src="assets/images/03.png" alt="R3sound らいぶらり"></a>
+  </header>
+
+  <main class="terms-main">
+    <article class="terms-card">
+      <h2>素材利用規約</h2>
+      <p class="terms-lead">当サイト（R3Sound）で配布している効果音素材は、以下の利用規約の範囲内であれば、どなたでも無料で自由にご利用いただけます。素材をダウンロードした時点で、本規約に同意したものとみなします。</p>
+
+      <section class="terms-section">
+        <h2>1. 利用条件（許可されていること）</h2>
+        <div class="terms-item"><h3>無償利用・商用利用</h3><p>個人・法人、非商用・商用（営利目的）を問わず、どなたでも完全無料で効果音をご利用いただけます。</p></div>
+        <div class="terms-item"><h3>クレジット表記不要</h3><p>作品内で当サイト名やリンクなどのクレジット表記（引用元表示）は一切不要です（もちろん表記していただける場合も歓迎いたします）。</p></div>
+        <div class="terms-item"><h3>素材の加工・改変</h3><p>用途に合わせて、音量調整、切り出し、フェードイン・フェードアウト、ピッチ変更などの編集・加工をしてご利用いただけます。</p></div>
+        <div class="terms-item"><h3>主な利用用途</h3><p>ゲーム開発、アプリ開発、動画制作（YouTube、TikTok等）、演劇・イベントでのBGM/効果音、TV・ラジオ番組、Webサイトなど、様々なコンテンツに組み込んでご使用いただけます。</p></div>
+      </section>
+
+      <section class="terms-section terms-prohibited">
+        <h2>2. 禁止事項（やってはいけないこと）</h2>
+        <p>トラブル防止のため、以下の行為は固く禁止いたします。</p>
+        <div class="terms-item"><h3>当サイトの効果音を主とした「音素材の紹介動画」等の制作・公開</h3><p>（例：当サイトの効果音を集めて「効果音まとめ」「作業用BGM」「効果音試聴動画」としてYouTube等に投稿する行為）</p></div>
+        <div class="terms-item"><h3>当サイトの効果音をそのまま組み込んだ「ポン出しアプリ」や「サンプラーアプリ」等の制作・配布・販売</h3><p>（ボタンを押すと単体で効果音が鳴る機能メインのアプリ・ゲーム・ソフトウェア等の制作は、有償・無償を問わず禁止します）</p></div>
+        <div class="terms-item"><h3>素材ファイルへの直接リンク（直リンク）</h3><p>（当サイトの音声ファイルやGoogleドライブのダウンロードURLへ直接リンクを貼る行為。紹介の際は必ずサイトのページURLを記載してください）</p></div>
+        <div class="terms-item"><h3>素材そのものの再配布・転売・二次配布</h3><p>（加工の有無を問わず、効果音素材としての再配布や素材集としての販売は禁止します）</p></div>
+        <div class="terms-item"><h3>公序良俗に反する用途での使用</h3><p>（違法行為、犯罪行為を助長するコンテンツ、過度なアダルトコンテンツ等での利用は禁止します）</p></div>
+      </section>
+
+      <section class="terms-section">
+        <h2>3. 著作権と免責事項</h2>
+        <div class="terms-item"><h3>著作権の帰属</h3><p>素材の加工・編集の有無に関わらず、当サイトで配布しているすべての効果音素材の著作権は、当サイト管理者に帰属します（著作権は放棄しておりません）。</p></div>
+        <div class="terms-item"><h3>免責事項</h3><p>当サイトの素材を利用したことによって生じた、いかなるトラブル・損害・不利益についても、当サイトおよび管理者は一切の責任を負いません。すべて自己責任においてご利用ください。</p></div>
+        <div class="terms-item"><h3>規約の変更</h3><p>本規約の内容は、予告なく変更・更新される場合があります。</p></div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="terms-footer"><a href="index.html">R3sound らいぶらり</a></footer>
+</body>
+</html>
