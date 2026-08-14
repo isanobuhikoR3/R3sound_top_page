@@ -46,7 +46,7 @@ FILLIT_追加_こどもの日_se_移動pt01,ピュオ,UI・操作,"エフェク�
 FILLIT_追加_こどもの日_se_移動pt02,チョプ,UI・操作,"エフェクト,解説動画向け","移動,変更",assets/sounds/FILLIT_追加_こどもの日_se_移動pt02.mp3,変更操作,TRUE
 FILLIT_追加_こどもの日_se_移動pt03,スタッ,生活・日常,"RPGゲーム向け,生活・日常向け","移動,足音",assets/sounds/FILLIT_追加_こどもの日_se_移動pt03.mp3,足音,TRUE
 FILLIT_追加_ネコ_se_ストーン,カラン,生活・日常,生活・日常,"移動,変更",assets/sounds/FILLIT_追加_ネコ_se_ストーン.mp3,缶詰,TRUE
-FILLIT_追加_ネコ_se_ストーン入れ替え,ニャオー（カラン）,"生活・日常,自然・環境",生活・日常,"鳴き声,ねこ,動物",assets/sounds/FILLIT_追加_ネコ_se_ストーン入れ替え.mp3,猫の鳴き声（ネコ缶）,TRUE
+FILLIT_追加_ネコ_se_ストーン入れ替え,ニャオー（カラン）,"生活・日常,自然・環境",生活・日常,"鳴き声,ねこ,動物",assets/sounds/FILLIT_追加_ネコ_se_ストーン入れ替え.mp3,猫の鳴き声（ネコ缶）,FALSE
 FILLIT_追加_ネコ_se_移動,スト,生活・日常,"RPGゲーム向け,生活・日常向け","移動,足音",assets/sounds/FILLIT_追加_ネコ_se_移動.mp3,足音,TRUE
 FILLIT_追加_ハロウィン_se_ストーン_pt01,ゴゴゴ,"自然・環境,生活・日常,ホラー演出","RPGゲーム向け,ホラー・演出向け,生活・日常向け","岩,石",assets/sounds/FILLIT_追加_ハロウィン_se_ストーン_pt01.mp3,岩,TRUE
 FILLIT_追加_ハロウィン_se_ストーン_pt02,ゴーッ,"自然・環境,生活・日常,ホラー演出","RPGゲーム向け,ホラー・演出向け,生活・日常向け","岩,石",assets/sounds/FILLIT_追加_ハロウィン_se_ストーン_pt02.mp3,岩,TRUE
