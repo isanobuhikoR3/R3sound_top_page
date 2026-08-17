@@ -3,11 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=R3sound_top_page/index.html">
+  <meta name="description" content="ゲーム・動画・配信などに使える、無料効果音ライブラリ">
   <title>R3sound らいぶらり</title>
-  <script>location.replace('R3sound_top_page/index.html');</script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .utility-nav .contact-request-link { border: 10px solid #fff; border-radius: 999px; background: rgba(255,255,255,.72); padding: 3px 10px 3px 3px; box-shadow: 0 3px 0 rgba(42,112,144,.18); transition: transform .2s ease, background .2s ease; }
+    .utility-nav .contact-request-link:hover, .utility-nav .contact-request-link:focus-visible { transform: translateY(-3px); background: #fff; }
+    .utility-nav .contact-request-link img { width: 25px; height: 25px; }
+    .search-with-favorites { display: flex; align-items: stretch; gap: 10px; }
+    .search-with-favorites .search { flex: 1; min-width: 0; }
+    .favorite-list-button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; flex: 0 0 auto; border: 1px solid #ff6672; border-radius: 22px; padding: 0 14px; background: #ff6672; color: #fff; font: 800 14px "Noto Sans JP", sans-serif; cursor: pointer; box-shadow: inset 0 1px rgba(255,255,255,.75), 0 3px 0 #d84f5b; transition: transform .2s ease, filter .2s ease; }
+    .favorite-list-button:hover, .favorite-list-button:focus-visible { transform: translateY(-2px); filter: brightness(1.06); }
+    .favorite-list-button img { width: 22px; height: 22px; object-fit: contain; }
+    .sound-actions { grid-template-columns: repeat(3, 1fr); }
+    .favorite-button { display: inline-flex; align-items: center; justify-content: center; gap: 3px; border: 1px solid #ffb6bd !important; background: #fffdf7; color: #ff6672 !important; }
+    .favorite-button img { width: 15px; height: 15px; object-fit: contain; }
+    .favorite-button.is-favorite { background: #ff6672; color: #fff !important; border-color: #ff6672 !important; }
+    @media (max-width: 760px) { .utility-nav .contact-request-link { border-width: 6px; padding: 2px 7px 2px 2px; } .utility-nav .contact-request-link img { width: 19px; height: 19px; } .search-with-favorites { gap: 7px; } .favorite-list-button { padding: 0 9px; font-size: 11px; } .favorite-list-button img { width: 18px; height: 18px; } }
+  </style>
 </head>
 <body>
-  <p><a href="R3sound_top_page/index.html">R3sound らいぶらりを開く</a></p>
+  <header class="hero">
+    <img class="hero-bg" src="assets/images/01.png" alt="">
+    <nav class="utility-nav" aria-label="補助メニュー">
+      <a href="about.html"><img src="assets/icons/a01.png" alt="">使い方</a>
+      <a href="terms.html"><img src="assets/icons/a02.png" alt="">利用規約</a>
+      <a href="privacy.html"><img src="assets/icons/a03.png" alt="">プライバシー</a>
+      <a class="contact-request-link" href="https://docs.google.com/forms/d/e/1FAIpQLSceCE_rCf4VIJfG_6CsPTrUjCPkH5xf-ZKE6IOs8wauiPo6TQ/viewform?usp=header" target="_blank" rel="noopener noreferrer"><img src="assets/images/06.png" alt="">問い合わせ・リクエスト</a>
+    </nav>
+    <img class="pet dog" src="assets/images/04.png" alt="手を振る犬">
+    <img class="note note-pink" src="assets/images/06.png" alt="">
+    <img class="note note-green" src="assets/images/09.png" alt="">
+    <img class="note note-blue" src="assets/images/07.png" alt="">
+    <img class="pet cat" src="assets/images/05.png" alt="手を振る猫">
+    <div class="hero-content">
+      <img class="logo" src="assets/images/03.png" alt="R3sound らいぶらり">
+      <p class="tagline">ゲーム・動画・配信などに使える！無料効果音ライブラリ</p>
+      <div class="search-with-favorites">
+        <form class="search" role="search">
+          <img src="assets/icons/a04.png" alt="">
+          <input type="search" aria-label="効果音を検索" placeholder="効果音を検索（例：決定、爆発、雨、森、魔法など）">
+        </form>
+        <button class="favorite-list-button" type="button"><img src="assets/icons/a18.png" alt="">お気に入り</button>
+      </div>
+      <div class="popular"><span>人気タグ：</span><button>決定</button><button>爆発</button><button>魔法</button><button>魔法</button><button>雨</button><button>森</button><button>戦闘</button><button>回復</button><button>足音</button><button>ドア</button><button>通知</button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section recommends" aria-labelledby="recommend-title">
+      <h2 id="recommend-title"><img src="assets/icons/a05.png" alt="">用途・シーン別おすすめセット</h2>
+      <div class="cards">
+        <article class="card card-pink"><img class="card-art" src="assets/images/10.png" alt="ノートパソコンとうさぎ"><h3>解説動画向け</h3><p>YouTubeなどの<br>解説・ナレーション動画に<br>おすすめの効果音セット！</p><a href="#video">セットを見る <img src="assets/icons/a07.png" alt=""></a></article>
+        <article class="card card-blue"><img class="card-art" src="assets/images/11.png" alt="ロケットと爆発"><h3>シューティング<br>ゲーム向け</h3><p>レーザー・爆発・敵撃破など<br>爽快感のある効果音セット！</p><a href="#shooting">セットを見る <img src="assets/icons/a07.png" alt=""></a></article>
+        <article class="card card-green"><img class="card-art" src="assets/images/12.png" alt="剣を持つ勇者"><h3>RPGゲーム向け</h3><p>戦闘・回復・レベルアップなど<br>冒険にぴったりの効果音セット！</p><a href="#rpg">セットを見る <img src="assets/icons/a07.png" alt=""></a></article>
+        <article class="card card-orange"><img class="card-art" src="assets/images/13.png" alt="カフェ"><h3>生活・日常向け</h3><p>家事・料理・ドア・電話など<br>日常シーンに使える効果音セット！</p><a href="#daily">セットを見る <img src="assets/icons/a07.png" alt=""></a></article>
+        <article class="card card-purple"><img class="card-art" src="assets/images/14.png" alt="おばけとお城"><h3>ホラー・演出向け</h3><p>不気味・恐怖・緊張感のある<br>演出に最適な効果音セット！</p><a href="#horror">セットを見る <img src="assets/icons/a07.png" alt=""></a></article>
+      </div>
+    </section>
+    <section class="section categories" aria-labelledby="category-title">
+      <h2 id="category-title"><img src="assets/icons/a06.png" alt="">カテゴリから探す</h2>
+      <div class="category-grid">
+        <a href="#ui"><img src="assets/icons/a08.png" alt=""><span>UI・操作</span></a>
+        <a href="#battle"><img src="assets/icons/a09.png" alt=""><span>戦闘・アクション</span></a>
+        <a href="#magic"><img src="assets/icons/a10.png" alt=""><span>魔法・ファンタジー</span></a>
+        <a href="#nature"><img src="assets/icons/a11.png" alt=""><span>自然・環境</span></a>
+        <a href="#vehicle"><img src="assets/icons/a12.png" alt=""><span>乗り物・機械</span></a>
+        <a href="#voice"><img src="assets/icons/a13.png" alt=""><span>人・ボイス</span></a>
+        <a href="#daily"><img src="assets/icons/a14.png" alt=""><span>生活・日常</span></a>
+        <a href="#horror"><img src="assets/icons/a15.png" alt=""><span>ホラー・演出</span></a>
+        <a href="#other"><img src="assets/icons/a16.png" alt=""><span>その他</span></a>
+      </div>
+    </section>
+    <section class="section sound-section" id="recommended-sounds" aria-labelledby="sound-title">
+      <h2 id="sound-title"><img src="assets/icons/a16.png" alt="">おすすめSE</h2>
+      <div class="sound-selection" aria-live="polite">
+        <span>おすすめのキーワード</span>
+        <div class="selected-source"><span class="selected-source-visual"><img id="sound-source-icon" src="assets/icons/a16.png" alt=""></span><b id="sound-source-title">おすすめキーワード</b></div>
+        <strong id="sound-selection-label">決定・爆発・雨・魔法</strong>
+      </div>
+      <div class="sound-grid" id="sound-grid"></div>
+    </section>
+  </main>
+  <footer>R3sound らいぶらり</footer>
+  <script src="script.js"></script>
 </body>
 </html>
