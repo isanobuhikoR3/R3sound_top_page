@@ -275,10 +275,10 @@ yui_pl_trap_fire,ズバーッ,戦闘・アクション,"RPGゲーム向け,ダ�
 yui_pl_trap_sleep,短いジングル,UI・操作,"RPGゲーム向け,ダメージ,眠る","短いジングル,眠る",assets/sounds/yui_pl_trap_sleep.mp3,短いジングル,TRUE
 yui_pl_trap_soil,ビチャチャ,自然・環境,"生活・日常向け,泥,足音","足音,土,泥",assets/sounds/yui_pl_trap_soil.mp3,足音,TRUE
 yui_pl_trap_wind,ビュウ,自然・環境,"RPGゲーム向け,自然音",風,assets/sounds/yui_pl_trap_wind.mp3,"し魔法,発動,攻撃,風,回転",TRUE
-r3sound_boal01,ポム,生活・日常,"生活・日常向け,ボール,つく,1回つく,NEW","ボール,つく,1回つく",assets/sounds/r3sound_boal01.mp3,生活音,TRUE
-r3sound_boal02,ポム,生活・日常,"生活・日常向け,ボール,つく,1回つく,NEW","ボール,つく,1回つく",assets/sounds/r3sound_boal02.mp3,生活音,TRUE
-r3sound_boal03,ポム,生活・日常,"生活・日常向け,ボール,つく,1回つく,NEW","ボール,つく,1回つく",assets/sounds/r3sound_boal03.mp3,生活音,TRUE
-r3sound_boal04,ポム,生活・日常,"生活・日常向け,ボール,つく,1回つく,NEW","ボール,つく,1回つく",assets/sounds/r3sound_boal04.mp3,生活音,TRUE
-r3sound_boal05,ポム,生活・日常,"生活・日常向け,ボール,つく,1回つく,NEW","ボール,つく,1回つく",assets/sounds/r3sound_boal05.mp3,生活音,TRUE
-r3sound_boal06,ポムポムポム,生活・日常,"生活・日常向け,ボール,つく,3回つく,NEW","ボール,つく,3回つく",assets/sounds/r3sound_boal06.mp3,生活音,TRUE
-r3sound_boal07,ポムポムポムポムポム,生活・日常,"生活・日常向け,ボール,つく,5回つく,NEW","ボール,つく,5回つく",assets/sounds/r3sound_boal07.mp3,生活音,TRUE
+r3sound_boal01,ポム01,生活・日常,"生活・日常向け,ボール,つく,1回つく,NEW","ボール,つく,1回つく",assets/sounds/r3sound_boal01.mp3,生活音,TRUE
+r3sound_boal02,ポム02,生活・日常,"生活・日常向け,ボール,つく,1回つく,NEW","ボール,つく,1回つく",assets/sounds/r3sound_boal02.mp3,生活音,TRUE
+r3sound_boal03,ポム03,生活・日常,"生活・日常向け,ボール,つく,1回つく,NEW","ボール,つく,1回つく",assets/sounds/r3sound_boal03.mp3,生活音,TRUE
+r3sound_boal04,ポム04,生活・日常,"生活・日常向け,ボール,つく,1回つく,NEW","ボール,つく,1回つく",assets/sounds/r3sound_boal04.mp3,生活音,TRUE
+r3sound_boal05,ポム05,生活・日常,"生活・日常向け,ボール,つく,1回つく,NEW","ボール,つく,1回つく",assets/sounds/r3sound_boal05.mp3,生活音,TRUE
+r3sound_boal06,ポム3回,生活・日常,"生活・日常向け,ボール,つく,3回つく,NEW","ボール,つく,3回つく",assets/sounds/r3sound_boal06.mp3,生活音,TRUE
+r3sound_boal07,ポム5回,生活・日常,"生活・日常向け,ボール,つく,5回つく,NEW","ボール,つく,5回つく",assets/sounds/r3sound_boal07.mp3,生活音,TRUE
