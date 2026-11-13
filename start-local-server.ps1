@@ -36,9 +36,13 @@ try {
 
     $extension = [System.IO.Path]::GetExtension($requestedPath).ToLowerInvariant()
     $context.Response.ContentType = if ($mimeTypes.ContainsKey($extension)) { $mimeTypes[$extension] } else { 'application/octet-stream' }
-    $bytes = [System.IO.File]::ReadAllBytes($requestedPath)
-    $context.Response.ContentLength64 = $bytes.Length
-    $context.Response.OutputStream.Write($bytes, 0, $bytes.Length)
+    $fileInfo = Get-Item -LiteralPath $requestedPath
+    $context.Response.Headers['Last-Modified'] = $fileInfo.LastWriteTimeUtc.ToString('R', [Globalization.CultureInfo]::InvariantCulture)
+    $context.Response.ContentLength64 = $fileInfo.Length
+    if ($context.Request.HttpMethod -ne 'HEAD') {
+      $bytes = [System.IO.File]::ReadAllBytes($requestedPath)
+      $context.Response.OutputStream.Write($bytes, 0, $bytes.Length)
+    }
     $context.Response.Close()
   }
 }
