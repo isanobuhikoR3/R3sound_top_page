@@ -37,6 +37,30 @@ function setSelection(key, icon) { const title = labels[key]; return { label: ti
 function categorySelection(category, icon) { return { label: category, icon, title: category, matches: (sound) => splitTerms(sound.category).includes(category) }; }
 function splitTerms(value) { return String(value || '').split(/[,\u3001\uFF0C.\u3002/|]+/).map((term) => term.trim()).filter(Boolean); }
 function hasTag(sound, value) { return splitTerms(sound.tag).includes(value); }
+async function loadNewSoundDates(sounds) {
+  await Promise.all(sounds.filter((sound) => hasTag(sound, 'NEW')).map(async (sound) => {
+    sound.modifiedAt = 0;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
+    try {
+      const response = await fetch(encodeURI(normalizeAudioPath(sound.audio_url)), {
+        method: 'HEAD', cache: 'no-store', signal: controller.signal
+      });
+      if (!response.ok) return;
+      const modifiedAt = Date.parse(response.headers.get('Last-Modified'));
+      if (Number.isFinite(modifiedAt)) sound.modifiedAt = modifiedAt;
+    } catch {
+      // Preserve CSV order when the server cannot provide modification dates.
+    } finally {
+      clearTimeout(timeout);
+    }
+  }));
+}
+function sortSounds(sounds) {
+  const newSounds = sounds.filter((sound) => hasTag(sound, 'NEW'));
+  newSounds.sort((a, b) => (b.modifiedAt || 0) - (a.modifiedAt || 0));
+  return [...newSounds, ...sounds.filter((sound) => !hasTag(sound, 'NEW'))];
+}
 function normalizeAudioPath(path) { return /\.[a-z0-9]+$/i.test(path) ? path : `${path}.mp3`; }
 function getDownloadFilename(src) {
   const filename = new URL(src, document.baseURI).pathname.split('/').pop();
@@ -85,7 +109,7 @@ function searchableValues(sound) { return [sound.title, sound.category, sound.ta
 function stopCard(card) { const audio = card.querySelector('audio'); if (audio) { audio.pause(); audio.currentTime = 0; } card.classList.remove('is-playing'); card.querySelector('.preview-button').textContent = '\u25b6 \u8a66\u8074'; }
 function renderSounds(key = 'default', suppliedSounds = null, searchTerm = '') {
   const selection = selections[key] || selections.default; let sounds = suppliedSounds || catalog.filter(selection.matches);
-  sounds = [...sounds.filter((sound) => hasTag(sound, 'NEW')), ...sounds.filter((sound) => !hasTag(sound, 'NEW'))];
+  sounds = sortSounds(sounds);
   soundLabel.textContent = key === 'search' ? `\u300c${searchTerm}\u300d` : selection.label; soundSourceIcon.src = selection.icon; soundSourceIcon.alt = selection.title; soundSourceTitle.textContent = selection.title; selectedSource.classList.toggle('is-set-image', Boolean(selection.setImage));
   if (!sounds.length) { soundGrid.innerHTML = '<p class="sound-empty">\u8a72\u5f53\u3059\u308bSE\u306f\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f\u3002</p>'; return; }
   soundGrid.innerHTML = sounds.map((sound, index) => `<article class="sound-card"><div class="sound-card-head"><h3>${hasTag(sound, 'NEW') ? '<img class="sound-new-icon" src="assets/icons/a19.png" alt="NEW"> ' : ''}${escapeHtml(sound.title)}</h3><span class="sound-category">${escapeHtml(sound.category)}</span></div><div class="sound-meta"><span>${escapeHtml(sound.tag)}</span><span class="keyword">${escapeHtml(sound.keywords)}</span></div><div class="waveform" aria-label="waveform">${waveformBars.map((height, bar) => `<i style="--bar-index:${bar};--bar-height:${Math.max(18, height - ((index * 7 + bar * 3) % 25))}%"></i>`).join('')}</div><audio preload="metadata" src="${encodeURI(normalizeAudioPath(sound.audio_url))}"></audio><div class="sound-actions"><button class="preview-button" type="button">\u25b6 \u8a66\u8074</button><button class="download-button" type="button">\u2193 \u30c0\u30a6\u30f3\u30ed\u30fc\u30c9</button>${favoriteButtonMarkup(sound)}</div></article>`).join('');
@@ -105,7 +129,7 @@ function runSearch(rawTerm) {
   const partial = catalog.filter((sound) => searchableValues(sound).some((value) => value.toLocaleLowerCase().includes(lowered)));
   const results = exact.length ? exact : partial; rememberSearch(term); showSuggestions(term, exact, partial); renderSounds('search', results, term); document.querySelector('#recommended-sounds').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-async function loadCatalog() { try { const response = await fetch(CSV_URL, { cache: 'no-store' }); if (!response.ok) throw new Error('catalog'); catalog = parseCsv(await response.text()).filter((sound) => String(sound.published).toUpperCase() === 'TRUE' && sound.audio_url); renderSounds(); } catch { soundGrid.innerHTML = '<p class="sound-empty">\u97f3\u6e90\u4e00\u89a7\u3092\u8aad\u307f\u8fbc\u3081\u307e\u305b\u3093\u3002</p>'; } }
+async function loadCatalog() { try { const response = await fetch(CSV_URL, { cache: 'no-store' }); if (!response.ok) throw new Error('catalog'); catalog = parseCsv(await response.text()).filter((sound) => String(sound.published).toUpperCase() === 'TRUE' && sound.audio_url); await loadNewSoundDates(catalog); renderSounds(); } catch { soundGrid.innerHTML = '<p class="sound-empty">\u97f3\u6e90\u4e00\u89a7\u3092\u8aad\u307f\u8fbc\u3081\u307e\u305b\u3093\u3002</p>'; } }
 searchForm.addEventListener('submit', (event) => { event.preventDefault(); runSearch(searchInput.value); });
 favoriteListButton.addEventListener('click', () => { suggestions.replaceChildren(); renderSounds('favorites'); document.querySelector('#recommended-sounds').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
 popular.addEventListener('click', (event) => { const button = event.target.closest('button'); if (!button) return; searchInput.value = button.textContent; runSearch(button.textContent); });
