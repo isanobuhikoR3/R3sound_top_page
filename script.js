@@ -42,6 +42,34 @@ function getDownloadFilename(src) {
   const filename = new URL(src, document.baseURI).pathname.split('/').pop();
   try { return decodeURIComponent(filename); } catch { return filename; }
 }
+async function downloadSound(audio, button) {
+  const card = button.closest('.sound-card');
+  card.querySelector('.download-error')?.remove();
+  button.disabled = true;
+  let objectUrl;
+  let link;
+  try {
+    const response = await fetch(audio.src);
+    if (!response.ok) throw new Error(`Audio download failed: ${response.status}`);
+    objectUrl = URL.createObjectURL(await response.blob());
+    link = document.createElement('a');
+    link.href = objectUrl;
+    link.download = getDownloadFilename(audio.src);
+    document.body.append(link);
+    link.click();
+  } catch (error) {
+    console.error(error);
+    const message = document.createElement('p');
+    message.className = 'download-error';
+    message.setAttribute('role', 'alert');
+    message.textContent = 'ダウンロードできませんでした。時間をおいて再度お試しください。';
+    card.append(message);
+  } finally {
+    link?.remove();
+    if (objectUrl) setTimeout(() => URL.revokeObjectURL(objectUrl), 60000);
+    button.disabled = false;
+  }
+}
 function escapeHtml(value) { return String(value).replace(/[&<>'"]/g, (char) => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' })[char]); }
 function getFavorites() { try { return new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]')); } catch { return new Set(); } }
 function saveFavorites(favorites) { localStorage.setItem(FAVORITES_KEY, JSON.stringify([...favorites])); }
@@ -83,5 +111,5 @@ favoriteListButton.addEventListener('click', () => { suggestions.replaceChildren
 popular.addEventListener('click', (event) => { const button = event.target.closest('button'); if (!button) return; searchInput.value = button.textContent; runSearch(button.textContent); });
 suggestions.addEventListener('click', (event) => { const button = event.target.closest('button[data-suggestion]'); if (!button) return; searchInput.value = button.dataset.suggestion; runSearch(button.dataset.suggestion); });
 document.querySelectorAll('.recommends .card a, .category-grid a').forEach((link) => link.addEventListener('click', (event) => { event.preventDefault(); const key = link.closest('.recommends') ? `set-${link.getAttribute('href').slice(1)}` : link.getAttribute('href').slice(1); suggestions.replaceChildren(); renderSounds(key); document.querySelector('#recommended-sounds').scrollIntoView({ behavior: 'smooth', block: 'start' }); }));
-soundGrid.addEventListener('click', (event) => { const button = event.target.closest('button'); if (!button) return; const card = button.closest('.sound-card'); if (button.classList.contains('favorite-button')) { const favorites = getFavorites(); const id = button.dataset.soundId; if (favorites.has(id)) favorites.delete(id); else favorites.add(id); saveFavorites(favorites); if (soundSourceTitle.textContent === labels.favorite) { renderSounds('favorites'); } else { const favorite = favorites.has(id); button.classList.toggle('is-favorite', favorite); button.setAttribute('aria-pressed', favorite); button.setAttribute('aria-label', favorite ? '\u304a\u6c17\u306b\u5165\u308a\u3092\89e3\u9664' : '\u304a\u6c17\u306b\u5165\u308a\u306b\8ffd\u52a0'); button.querySelector('img').src = favorite ? 'assets/icons/a18.png' : 'assets/icons/a17.png'; } return; } const audio = card.querySelector('audio'); if (button.classList.contains('preview-button')) { const play = !card.classList.contains('is-playing'); soundGrid.querySelectorAll('.sound-card.is-playing').forEach(stopCard); if (play) { audio.play().then(() => { card.classList.add('is-playing'); button.textContent = '\u25a0 \u505c\u6b62'; }).catch(() => {}); audio.onended = () => stopCard(card); } return; } const link = document.createElement('a'); link.href = audio.src; link.download = getDownloadFilename(audio.src); link.click(); });
+soundGrid.addEventListener('click', (event) => { const button = event.target.closest('button'); if (!button) return; const card = button.closest('.sound-card'); if (button.classList.contains('favorite-button')) { const favorites = getFavorites(); const id = button.dataset.soundId; if (favorites.has(id)) favorites.delete(id); else favorites.add(id); saveFavorites(favorites); if (soundSourceTitle.textContent === labels.favorite) { renderSounds('favorites'); } else { const favorite = favorites.has(id); button.classList.toggle('is-favorite', favorite); button.setAttribute('aria-pressed', favorite); button.setAttribute('aria-label', favorite ? '\u304a\u6c17\u306b\u5165\u308a\u3092\89e3\u9664' : '\u304a\u6c17\u306b\u5165\u308a\u306b\8ffd\u52a0'); button.querySelector('img').src = favorite ? 'assets/icons/a18.png' : 'assets/icons/a17.png'; } return; } const audio = card.querySelector('audio'); if (button.classList.contains('preview-button')) { const play = !card.classList.contains('is-playing'); soundGrid.querySelectorAll('.sound-card.is-playing').forEach(stopCard); if (play) { audio.play().then(() => { card.classList.add('is-playing'); button.textContent = '\u25a0 \u505c\u6b62'; }).catch(() => {}); audio.onended = () => stopCard(card); } return; } void downloadSound(audio, button); });
 renderHistory(); loadCatalog();
