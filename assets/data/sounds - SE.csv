@@ -331,3 +331,39 @@ R3sound_rain05,雨02_室内,自然・環境,"生活・日常,雨,水,しずく,N
 R3sound_rain04,雨03,自然・環境,"生活・日常,雨,水,しずく,NEW","雨,水,しずく",assets/sounds/R3sound_rain04.mp3,自然音,TRUE
 R3sound_rain03,雨04,自然・環境,"生活・日常,雨,水,しずく,NEW","雨,水,しずく",assets/sounds/R3sound_rain03.mp3,自然音,TRUE
 R3sound_rain02,雨05,自然・環境,"生活・日常,雨,水,しずく,NEW","雨,水,しずく",assets/sounds/R3sound_rain02.mp3,自然音,TRUE
+2 - 25_nissaka_success,成功（小）01,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/2 - 25_nissaka_success.mp3,変更操作,TRUE
+25_nissaka_big_decision_pt01,大決定音01,UI・操作,"解説動画向け,大きな決定,NEW","大きな決定,ボタン押下,OK",assets/sounds/25_nissaka_big_decision_pt01.mp3,変更操作,TRUE
+25_nissaka_big_decision_pt02,大決定音02,UI・操作,"解説動画向け,大きな決定,NEW","大きな決定,ボタン押下,OK",assets/sounds/25_nissaka_big_decision_pt02.mp3,変更操作,TRUE
+25_nissaka_big_decision_pt03,大決定音03,UI・操作,"解説動画向け,大きな決定,NEW","大きな決定,ボタン押下,OK",assets/sounds/25_nissaka_big_decision_pt03.mp3,変更操作,TRUE
+25_nissaka_failed03_pt01,失敗（小）01,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed03_pt01.mp3,変更操作,TRUE
+25_nissaka_failed03_pt02,失敗（小）02,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed03_pt02.mp3,変更操作,TRUE
+25_nissaka_failed03_pt03,失敗（小）03,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed03_pt03.mp3,変更操作,TRUE
+25_nissaka_failed04_pt01,失敗（小）04,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed04_pt01.mp3,変更操作,TRUE
+25_nissaka_failed04_pt02,失敗（小）05,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed04_pt02.mp3,変更操作,TRUE
+25_nissaka_failed04_pt03,失敗（小）06,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed04_pt03.mp3,変更操作,TRUE
+6 - 25_nissaka_success_pt02,成功（小）02,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/6 - 25_nissaka_success_pt02.mp3,変更操作,TRUE
+6 - 25_nissaka_success_pt03,成功（小）03,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/6 - 25_nissaka_success_pt03.mp3,変更操作,TRUE
+7 - 25_nissaka_success,成功（小）04,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/7 - 25_nissaka_success.mp3,変更操作,TRUE
+7 - 25_nissaka_success_pt02,成功（小）05,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/7 - 25_nissaka_success_pt02.mp3,変更操作,TRUE
+7 - 25_nissaka_success_pt03,成功（小）06,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/7 - 25_nissaka_success_pt03.mp3,変更操作,TRUE
+25_nissaka_failed01_pt01,失敗（小）07,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed01_pt01.mp3,変更操作,TRUE
+25_nissaka_failed01_pt02,失敗（小）08,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed01_pt02.mp3,変更操作,TRUE
+25_nissaka_failed01_pt03,失敗（小）09,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed01_pt03.mp3,変更操作,TRUE
+25_nissaka_failed02_pt01,失敗（小）10,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed02_pt01.mp3,変更操作,TRUE
+25_nissaka_failed02_pt02,失敗（小）11,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed02_pt02.mp3,変更操作,TRUE
+25_nissaka_failed02_pt03,失敗（小）12,UI・操作,"解説動画向け,否定的,小さな失敗,NEW","否定的,小さな失敗,失敗",assets/sounds/25_nissaka_failed02_pt03.mp3,変更操作,TRUE
+2 - 25_nissaka_success_pt02,成功（小）07,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/2 - 25_nissaka_success_pt02.mp3,変更操作,TRUE
+2 - 25_nissaka_success_pt03,成功（小）08,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/2 - 25_nissaka_success_pt03.mp3,変更操作,TRUE
+3 - 25_nissaka_success,成功（小）09,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/3 - 25_nissaka_success.mp3,変更操作,TRUE
+3 - 25_nissaka_success_pt02,成功（小）10,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/3 - 25_nissaka_success_pt02.mp3,変更操作,TRUE
+3 - 25_nissaka_success_pt03,成功（小）11,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/3 - 25_nissaka_success_pt03.mp3,変更操作,TRUE
+4 - 25_nissaka_success,成功（小）12,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/4 - 25_nissaka_success.mp3,変更操作,TRUE
+4 - 25_nissaka_success_pt02,成功（小）13,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/4 - 25_nissaka_success_pt02.mp3,変更操作,TRUE
+4 - 25_nissaka_success_pt03,成功（小）14,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/4 - 25_nissaka_success_pt03.mp3,変更操作,TRUE
+5 - 25_nissaka_success,成功（小）15,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/5 - 25_nissaka_success.mp3,変更操作,TRUE
+5 - 25_nissaka_success_pt02,成功（小）16,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/5 - 25_nissaka_success_pt02.mp3,変更操作,TRUE
+5 - 25_nissaka_success_pt03,成功（小）17,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/5 - 25_nissaka_success_pt03.mp3,変更操作,TRUE
+6 - 25_nissaka_success,成功（小）18,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/6 - 25_nissaka_success.mp3,変更操作,TRUE
+1 - 25_nissaka_success,成功（小）19,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/1 - 25_nissaka_success.mp3,変更操作,TRUE
+1 - 25_nissaka_success_pt02,成功（小）20,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/1 - 25_nissaka_success_pt02.mp3,変更操作,TRUE
+1 - 25_nissaka_success_pt03,成功（小）21,UI・操作,"解説動画向け,肯定,小さな成功,NEW","肯定的,小さな成功,成功",assets/sounds/1 - 25_nissaka_success_pt03.mp3,変更操作,TRUE
